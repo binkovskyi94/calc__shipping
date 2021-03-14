@@ -1,0 +1,614 @@
+// ==========================================================<МИКСИНЫ>==================================================
+
+@import 'mixins';
+
+// =====================================================================================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// ==========================================================<ШРИФТЫ>===================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// ==================================================< -- @import шрифты -->============================================
+
+@import 'mixins/font-face';
+
+// =====================================================================================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// ====================================================< -- Local шрифты -- >===========================================
+
+@import 'mixins/local-fonts';
+
+// =====================================================================================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// ====================================================< -- System шрифты -- >==========================================
+@import 'mixins/system-fonts';
+
+// =====================================================================================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// =========================================================<ПЕРЕМЕННЫЕ>================================================
+
+@import 'library-vars';
+@import 'vars';
+$minWidth: 320px;
+$maxWidth: 1920px;
+
+// =====================================================================================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// ====================================================<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>=====================================
+
+@import 'null';
+
+// =====================================================================================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// ============================================<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==========================
+@import 'components/header';
+@import 'components/main';
+@import 'components/footer';
+@import 'global';
+@import 'animation/anim';
+@import 'fonts';
+@import 'lib/nouislider';
+
+// =====================================================================================================================
+// =====================================================================================================================
+// =====================================================================================================================
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - /
+//
+//                                                    <ОСНОВНОЙ БЛОК>
+//
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - /
+// =====================================================================================================================
+// =====================================================================================================================
+// - - - - - - - - - - - - - - - - - - - - - - - - - <SECTION CONTENT> - - - - - - - - - - - - - - - - - - - - - - - - - /
+.calc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.wrapper {
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 15px;
+  background-color: #f0f8ff;
+  border-radius: 50px;
+}
+
+.calc-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inconsolata', monospace;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.calc__bg-img {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// calc-contacts
+.calc-contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc-contacts__data {
+
+  .calc-contacts__name {
+    position: relative;
+
+    input {
+      display: block;
+      max-width: 220px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+  }
+
+  .calc-contacts__surname {
+    position: relative;
+    margin-top: 10px;
+
+    input {
+      display: block;
+      max-width: 220px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+  }
+
+  .calc-contacts__number {
+    position: relative;
+    margin-top: 10px;
+
+    input {
+      display: block;
+      max-width: 220px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+  }
+}
+
+.calc-contacts__coment {
+  position: relative;
+  display: block;
+  margin-left: 20px;
+
+  textarea {
+    height: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding: 12px;
+    border: 1px solid $checkBorder;
+  }
+
+  .calc-label__coment {
+    position: absolute;
+    height: 1px;
+    top: 0px;
+    left: 10px;
+    padding: 0 5px;
+    width: 100px;
+    background-color: $checkBg;
+    color: $checkColor;
+  }
+
+  span {
+    color: $chekSpanColor;
+    padding-left: 5px;
+  }
+}
+
+// calc-dimensions
+.calc-dimensions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cargo {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.calc-dimensions__indicators {
+  display: block;
+
+  .calc-dimensions__weight {
+    position: relative;
+
+    input {
+      display: block;
+      max-width: 220px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+
+    input[type=range] {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0px;
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  .calc-dimensions__width {
+    position: relative;
+    margin-top: 13px;
+
+    input {
+      display: block;
+      max-width: 220px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+
+    input[type=range] {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0px;
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  .calc-dimensions__height {
+    position: relative;
+    margin-top: 13px;
+
+    input {
+      display: block;
+      max-width: 220px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+
+    input[type=range] {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0px;
+      padding: 0;
+      border: 0;
+    }
+  }
+}
+
+// calc-services
+.calc-services {
+  display: flex;
+  justify-content: center;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  font-weight: 400;
+
+  .calc-services__box-load {
+    display: flex;
+    margin-right: 10px;
+
+    label {
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 20px;
+        height: 20px;
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .calc-services__box-del {
+    display: flex;
+    margin-right: 10px;
+
+    label {
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 20px;
+        height: 20px;
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// calc-delivery__details
+.calc-delivery__details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+
+  .calc-delivery__data {
+    position: relative;
+    display: inline-flex;
+    margin-right: 16px;
+
+    input {
+      display: block;
+      max-width: 220px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+
+    .calc-label__delivery-data {
+      position: absolute;
+      height: 1px;
+      top: 0px;
+      left: 10px;
+      padding: 0 5px;
+      width: 70px;
+      background-color: $checkBg;
+      color: $checkColor;
+
+      span {
+        color: $chekSpanColor;
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .calc-delivery__city {
+    position: relative;
+    display: inline-flex;
+
+    select {
+      display: block;
+      max-width: 220px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+
+    .calc-label__delivery-city {
+      position: absolute;
+      height: 1px;
+      top: 0px;
+      left: 10px;
+      padding: 0 5px;
+      width: 70px;
+      background-color: $checkBg;
+      color: $checkColor;
+
+      span {
+        color: $chekSpanColor;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+// calc-price
+.calc-price {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+
+  .calc-price__box {
+    position: relative;
+
+    input {
+      display: block;
+      max-width: 220px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $checkBorder;
+      outline: none;
+      padding: 12px;
+    }
+
+    .calc-label__price {
+      position: absolute;
+      height: 1px;
+      top: 0px;
+      left: 10px;
+      padding: 0 5px;
+      width: 70px;
+      background-color: $checkBg;
+      color: $checkColor;
+
+      span {
+        color: $chekSpanColor;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+// calc-btn
+.calc-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 15px 0;
+  max-width: 220px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #1e940d;
+  color: $checkBg;
+  font-family: 'Inconsolata', monospace;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// cargo
+.cargo {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: $primary;
+  text-align: center;
+  border-radius: 5px;
+  color: $checkBg;
+  transition: 0.3s ease-in-out;
+}
+
+// style arrows-input type number
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.modal__dialog {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.modal__container {
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  background-color: #ffe4c4;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 4px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal__content {
+  display: block;
+  text-align: center;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #000;
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 30px;
+  color: #000;
+  opacity: .5;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal__title {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.modal__input {
+  display: block;
+  margin: 20px auto 20px auto;
+  width: 280px;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 20px;
+  outline: 0;
+}
+
+#modal-btn {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  border: none;
+  padding: 10px;
+  background: #0B5FFF;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+  text-align: center;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/*browser arrows-input  */
+.list-group__li {
+  display: block;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - < /SECTION CONTENT> - - - - - - - - - - - - - - - - - - - - - - - - - /
+// =====================================================================================================================
+// =====================================================================================================================
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - /
+//
+//                                                    < /ОСНОВНОЙ БЛОК>
+//
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - /

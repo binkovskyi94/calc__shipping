@@ -1,0 +1,40 @@
+.noUi-target {
+  position: absolute;
+  width: 90%;
+  bottom: 10px;
+  border: none;
+}
+
+.noUi-connect {
+  height: 0%;
+  width: 0%;
+  background-color: inherit;
+}
+
+.noUi-touch-area {
+  height: 100%;
+  width: 100%;
+  background-color: $primary;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.noUi-horizontal {
+  height: 0px;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  top: 2px;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-horizontal .noUi-tooltip {
+  display: none;
+}

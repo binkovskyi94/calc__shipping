@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!--maximum-scale=1.0, user-scalable=0 --><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/libs.min.css"><link rel="stylesheet" href="css/style.min.css"><title>Document</title></head><body><header></header><!----------------------------------------------------START WRITE CODE---------------------------------------------------------------------------------------------------------------------------------------------------><main class="calc"><div class="wrapper"><h1 class="calc-title">Shipping <img class="calc__bg-img" src="images/icons/shipping-bg.png" alt=""> calculator</h1><form class="calc-form"><fieldset><h2 class="calc-subtitle">Contacts</h2><div class="calc-contacts"><div class="calc-contacts__data"><div class="calc-contacts__name"><div class="calc-label__data"></div><div class="calc-label-name">First name<span>*</span></div><input class="calc-contacts__input" id="name" type="text" placeholder="Your name..." required></div><div class="calc-contacts__surname"><div class="calc-label__data"></div><div class="calc-label-name">Last name<span>*</span></div><input class="calc-contacts__input" id="surname" type="text" placeholder="Your last name..." required></div><div class="calc-contacts__number"><div class="calc-label__data"></div><div class="calc-label-name">Phone<span>*</span></div><input class="calc-contacts__input" id="number" type="tel" placeholder="Your phone number..." required></div></div><div class="calc-contacts__coment"><div class="calc-label__coment"></div><div class="calc-label-name">Comments<span>*</span></div><textarea class="calc-contacts__area" id="comment" cols="30" rows="5"></textarea></div></div><h2 class="calc-subtitle">Dimensions</h2><div class="calc-dimensions"><div class="cargo" id="cargo">0 kg</div><div class="calc-dimensions__indicators"><div class="calc-dimensions__weight"><div class="calc-label__indicators"></div><div class="calc-label-name">Weight, (kg)<span>*</span></div><input class="calc-dimensions__input" id="weight" type="number" placeholder="1 kg" required><div id="weight-range"></div></div><div class="calc-dimensions__width"><div class="calc-label__indicators"></div><div class="calc-label-name">Width, (m)<span>*</span></div><input class="calc-dimensions__input" id="width" type="number" placeholder="1 m" required><div id="width-range"></div></div><div class="calc-dimensions__height"><div class="calc-label__indicators"></div><div class="calc-label-name">Height, (m)<span>*</span></div><input class="calc-dimensions__input" id="height" type="number" placeholder="1 m" required><div id="height-range"></div></div></div></div><h2 class="calc-subtitle">Delivery details</h2><div class="calc-services"><div class="calc-services__box-del"><label><input class="calc-services__del" id="del" type="checkbox"> <span>Delivery</span></label></div><div class="calc-services__box-load"><label><input class="calc-services__load" id="load" type="checkbox"> <span>Free unloading</span></label></div></div><div class="calc-delivery__details"><div class="calc-delivery__data"><div class="calc-label__delivery-data"></div><div class="calc-label-name">Date<span>*</span></div><input class="calc-delivery__input" id="date"></div><div class="calc-delivery__city"><div class="calc-label__delivery-city"></div><div class="calc-label-name">City<span>*</span></div><select class="calc-delivery__select" id="city" required></select></div></div><div class="calc-price"><div class="calc-price__box"><div class="calc-label__price"></div><div class="calc-label-name">Price<span>*</span></div><input class="calc-price__input" type="text" id="price"></div></div><button class="calc-btn" type="submit" id="btn">order</button></fieldset></form></div></main><div class="modal"><div class="modal__dialog"><div class="modal__container"><form class="modal__form"><div сlass="modal__content" id="modal-content"><h3>Данные</h3><h4 class="modal__heading">Контакты:</h4><div class="modal__box" id="modal-name">Name: <span></span></div><div class="modal__box" id="modal-surname">Surname: <span></span></div><div class="modal__box" id="modal-phone">Phone: <span></span></div><div class="modal__box" id="modal-comments">Comments: <span></span></div><h4 class="modal__heading">Габариты:</h4><div class="modal__box" id="modal-width">Width: <span></span></div><div class="modal__box" id="modal-height">Height: <span></span></div><div class="modal__box" id="modal-weight">Weight: <span></span></div><h4 class="modal__heading">Доставка:</h4><div class="modal__box" id="modal-date">Date: <span></span></div><div class="modal__box" id="modal-city">Country: <span></span></div><div class="modal__box" id="modal-appartment">Free unloading: <span></span></div><div class="modal__box" id="modal-cost">Цена: <span></span></div></div><div class="modal__close" data-close>&times;</div><button сlass="modal__btn" id="modal-btn" type="submit" name="submit">Отправить</button></form></div></div></div><!-- <main class="calc">
+    <div class="wrapper">
+      <h1 class="calc-title">Delivery calculator</h1>
+      <form class="calc-form">
+        <fieldset>
+          <h2 class="calc-subtitle">Contacts</h2>
+          <div class="calc-contacts">
+            <div class="calc-contacts__data">
+              <div class="calc-contacts__name">
+                <div class="calc-label__data">First name<span>*</span></div>
+                <input class="calc-contacts__input" id="name" type="text" placeholder="Adam" required>
+              </div>
+              <div class="calc-contacts__surname">
+                <div class="calc-label__data">Last name<span>*</span></div>
+                <input class="calc-contacts__input" id="surname" type="text" placeholder="Smith" required>
+              </div>
+              <div class="calc-contacts__number">
+                <div class="calc-label__data">Phone<span>*</span></div>
+                <input class="calc-contacts__input" id="number" type="tel" placeholder="+38(099)-998-22-82" required>
+              </div>
+            </div>
+            <div class="calc-contacts__coment">
+              <div class="calc-label__coment">Comments<span>*</span></div>
+              <textarea class="calc-contacts__area" id="comment" cols="30" rows="5"></textarea>
+            </div>
+          </div>
+          <h2 class="calc-subtitle">Dimensions</h2>
+          <div class="calc-dimensions">
+            <div class="cargo" id="cargo">0 kg</div>
+            <div class="calc-dimensions__indicators">
+              <div class="calc-dimensions__weight">
+                <div class="calc-label__indicators">Weight, (kg)<span>*</span></div>
+                <input class="calc-dimensions__input" id="weight" type="number" placeholder="1 kg" required>
+                <div id="weight-range"></div>
+              </div>
+              <div class="calc-dimensions__width">
+                <div class="calc-label__indicators">Width, (m)<span>*</span></div>
+                <input class="calc-dimensions__input" id="width" type="number" placeholder="1 m" required>
+                <div id="width-range"></div>
+              </div>
+              <div class="calc-dimensions__height">
+                <div class="calc-label__indicators">Height, (m)<span>*</span></div>
+                <input class="calc-dimensions__input" id="height" type="number" placeholder="1 m" required>
+                <div id="height-range"></div>
+              </div>
+            </div>
+          </div>
+          <h2 class="calc-subtitle">Delivery details</h2>
+          <div class="calc-services">
+            <div class="calc-services__box-load">
+              <label>
+                <input class="calc-services__load calc-services__animation" id="load" type="checkbox">
+                <span>Width, m.</span>
+              </label>
+            </div>
+            <div class="calc-services__box-del">
+              <label>
+                <input class="calc-services__del calc-services__animation" id="del" type="checkbox">
+                <span>Width, m.</span>
+              </label>
+            </div>
+            <div class="calc-services__box-fargo">
+              <label>
+                <input class="calc-services__fargo calc-services__animation" id="fargo" type="checkbox">
+                <span>Width, m.</span>
+              </label>
+            </div>
+          </div>
+          <div class="calc-delivery__details">
+            <div class="calc-delivery__data">
+              <div class="calc-label__delivery-data">Delivery<span>*</span></div>
+              <input class="calc-delivery__input" id="delivery">
+            </div>
+            <div class="calc-delivery__city">
+              <div class="calc-label__delivery-city">City<span>*</span></div>
+              <select class="calc-delivery__select" id="city" required></select>
+            </div>
+          </div>
+          <div class="calc-price">
+            <div class="calc-price__box">
+              <div class="calc-label__price">Price<span>*</span></div>
+              <input class="calc-price__input" type="text" id="price">
+            </div>
+          </div>
+          <button class="calc-btn" type="submit" id="btn">order</button>
+        </fieldset>
+      </form>
+    </div>
+  </main> --><!----------------------------------------------------STOP WRITE CODE---------------------------------------------------------------------------------------------------------------------------------------------------><footer></footer><script src="js/libs.min.js"></script><script src="js/main.js"></script></body></html>
